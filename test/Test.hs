@@ -16,7 +16,9 @@ prop_model :: [(String,Int)] -> Bool
 prop_model kvs = and $ for keys $ \key ->
     S.lookup key ht == M.lookup key mp
   where
-    ht = S.fromList kvs
-    mp = M.fromList kvs
+    len = length kvs
+    kvs' = take (len `div` 2) kvs
+    ht = S.fromList kvs'
+    mp = M.fromList kvs'
     keys = map fst kvs
     for = flip map
