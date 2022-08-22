@@ -2,7 +2,7 @@
 
 module Main where
 
-import Test.Framework.TH
+import Test.Framework.TH.Prime
 import Test.Framework.Providers.QuickCheck2
 import qualified Data.Map as M
 import qualified Data.StaticHash as S
