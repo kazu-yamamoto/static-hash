@@ -7,8 +7,9 @@ License-File:           LICENSE
 Synopsis:               Immutable hash
 Description:            Pure immutable hash whose lookup is O(1)
 Category:               Data Structures
-Cabal-Version:          >= 1.6
+Cabal-Version:          >= 1.10
 Build-Type:             Simple
+
 library
   if impl(ghc >= 6.12)
     GHC-Options:        -Wall -fno-warn-unused-do-bind
@@ -16,6 +17,8 @@ library
     GHC-Options:        -Wall
   Exposed-Modules:      Data.StaticHash
   Build-Depends:        base >= 4 && < 5, primes, hashable, array, containers
+  Default-Language:     Haskell2010
+
 Source-Repository head
   Type:                 git
   Location:             https://github.com/kazu-yamamoto/static-hash.git
